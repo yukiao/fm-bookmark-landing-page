@@ -38,7 +38,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-screen max-w-full">
+    <div className="w-screen max-w-full sticky top-0 bg-white">
       <Container>
         <div className="flex justify-between items-center h-24">
           <Image
