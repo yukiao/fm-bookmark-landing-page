@@ -30,6 +30,7 @@ const config: Config = {
       addBase({
         html: {
           color: theme("colors.very-dark-blue"),
+          fontSize: "18px",
         },
       });
     }),
