@@ -38,12 +38,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-screen max-w-full">
+    <div className="w-screen max-w-full sticky top-0 bg-white">
       <Container>
         <div className="flex justify-between items-center h-24">
           <Image
             src={"/images/logo-bookmark.svg"}
-            className="relative z-10"
+            className="relative z-30"
             alt={"logo"}
             width={148}
             height={25}
@@ -70,7 +70,7 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="md:hidden relative z-10">
+          <div className="md:hidden relative z-30">
             <Hamburger
               size={24}
               toggled={toggle}
@@ -82,7 +82,7 @@ const Navbar = () => {
       </Container>
 
       {toggle && (
-        <div className="fixed w-screen max-w-full h-screen bg-very-dark-blue top-0 left-0 opacity-90">
+        <div className="fixed w-screen max-w-full h-screen bg-very-dark-blue top-0 left-0 opacity-90 z-20">
           <Container>
             <ul className="flex flex-col mt-24">
               {navItems.map((navItem) => (
