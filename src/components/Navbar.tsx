@@ -3,6 +3,7 @@ import React, { PropsWithChildren, useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
+import useScroll from "@/app/_hooks/useScroll";
 
 type NavItem = {
   title: string;
@@ -11,23 +12,23 @@ type NavItem = {
 
 interface NavbarProps {}
 
+const navItems: NavItem[] = [
+  {
+    title: "Features",
+    id: "features",
+  },
+  {
+    title: "Pricing",
+    id: "pricing",
+  },
+  {
+    title: "Contact",
+    id: "contact",
+  },
+];
+
 const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const navItems: NavItem[] = [
-    {
-      title: "Features",
-      id: "features",
-    },
-    {
-      title: "Pricing",
-      id: "pricing",
-    },
-    {
-      title: "Contact",
-      id: "contact",
-    },
-  ];
 
   const handleNavItemClick = (id: string) => {
     const section = document.getElementById(id);
@@ -37,8 +38,14 @@ const Navbar = () => {
     }
   };
 
+  const isScrolled = useScroll(96);
+
   return (
-    <div className="w-screen max-w-full sticky top-0 bg-white">
+    <div
+      className={`w-screen max-w-full sticky top-0 bg-white ${
+        isScrolled && "shadow-md"
+      }`}
+    >
       <Container>
         <div className="flex justify-between items-center h-24">
           <Image

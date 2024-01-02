@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import SectionHeader from "./SectionHeader";
 
 type FeatureKey = "simple-bookmarking" | "speedy-searching" | "easy-sharing";
 
@@ -71,15 +72,11 @@ const Features = () => {
   )!;
 
   return (
-    <section id="features" className="h-screen py-24">
-      <div className="px-6 sm:px-14 lg:px-28">
-        <h2 className="text-2xl font-semibold text-center">Features</h2>
-        <p className="text-grayish-blue max-w-sm text-center mx-auto mt-5 text-sm">
-          Our aim is to make it quick and easy for you to access your favorite
-          websites. Your bookmark sync between your devices so you can access
-          them on the go.
-        </p>
-      </div>
+    <section id="features" className="pt-24">
+      <SectionHeader
+        title="Features"
+        description="Our aim is to make it quick and easy for you to access your favorite websites. Your bookmark sync between your devices so you can access them on the go."
+      />
 
       <ul className="flex flex-col lg:flex-row max-w-screen-sm mx-auto items-center justify-center mt-10 px-6 sm:px-14 lg:px-0">
         {featuresList.map((feature) => (
@@ -99,7 +96,7 @@ const Features = () => {
 
       <div className="flex flex-col space-y-16 lg:space-y-0 lg:flex-row box-border mt-10">
         <div className="lg:w-1/2 ">
-          <div className="mx-6 sm:mx-14 lg:ml-28 relative">
+          <div className="mx-6 sm:mx-14 lg:ml-28 relative -z-10">
             <Image
               width={featureDetail.imgWidth}
               height={featureDetail.imgHeight}
