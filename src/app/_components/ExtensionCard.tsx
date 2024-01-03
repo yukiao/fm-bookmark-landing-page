@@ -2,6 +2,7 @@ import React from "react";
 import { Browser } from "./Extension";
 import Image from "next/image";
 import { useMediaQuery } from "../_hooks/useMediaQuery";
+import useClient from "@/hooks/useClient";
 
 interface ExtensionCardProps extends Browser {
   index: number;
@@ -14,6 +15,11 @@ const ExtensionCard = ({
   index,
 }: ExtensionCardProps) => {
   const isLgScreen = useMediaQuery("(min-width: 1024px)");
+  const isClient = useClient();
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div
