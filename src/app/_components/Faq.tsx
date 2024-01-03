@@ -4,7 +4,7 @@ import Accordion from "@/components/Accordion";
 
 const Faq = () => {
   return (
-    <section className="mb-5">
+    <section className="py-20">
       <SectionHeader
         title={"Frequently Asked Questions"}
         description={
@@ -35,6 +35,11 @@ const Faq = () => {
             <span>Hello</span>
           </Accordion.Item>
         </Accordion>
+        <div className="flex items-center justify-center my-10">
+          <button className="text-white px-3 py-2 text-[14px] font-medium bg-soft-blue rounded-sm">
+            More Info
+          </button>
+        </div>
       </div>
     </section>
   );

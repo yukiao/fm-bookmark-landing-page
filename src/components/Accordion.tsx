@@ -4,6 +4,7 @@ import {
 } from "@/contexts/Accordion.context";
 import React, { PropsWithChildren, useState } from "react";
 import Image from "next/image";
+import AccordionChevron from "./AccordionChevron";
 
 interface AccordionProps extends PropsWithChildren {}
 interface AccordionItemProps extends PropsWithChildren {
@@ -43,23 +44,18 @@ Accordion.Item = ({ children, name, title }: AccordionItemProps) => {
   return (
     <div className="border-b border-grayish-blue flex flex-col py-3 first:border-t ">
       <div
-        className="flex justify-between items-center cursor-pointer"
+        className="flex justify-between items-center cursor-pointer group"
         onClick={handleAccordionClick}
       >
-        <h3 className="font-medium">{title}</h3>
-        <div
-          className={`transition-transform ${
-            isActive ? "rotate-180" : "rotate-0"
-          } duration-200`}
-        >
-          <Image
-            src={"/images/icon-arrow.svg"}
-            className="shrink-0"
-            alt={"arrow"}
-            width={18}
-            height={12}
-          />
-        </div>
+        <h3 className="font-medium group-hover:text-soft-red">{title}</h3>
+
+        <AccordionChevron
+          className={`${
+            isActive
+              ? "stroke-soft-red rotate-180"
+              : "stroke-soft-blue rotate-0"
+          } transition-all duration-300 shrink-0`}
+        />
       </div>
       <div
         className={`${
