@@ -3,7 +3,6 @@ import {
   useAccordionContext,
 } from "@/contexts/Accordion.context";
 import React, { PropsWithChildren, useState } from "react";
-import Image from "next/image";
 import AccordionChevron from "./AccordionChevron";
 
 interface AccordionProps extends PropsWithChildren {}

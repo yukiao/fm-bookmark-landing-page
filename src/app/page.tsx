@@ -1,4 +1,5 @@
 "use client";
+import ContactUs from "./_components/ContactUs";
 import Extension from "./_components/Extension";
 import Faq from "./_components/Faq";
 import Features from "./_components/Features";
@@ -11,6 +12,7 @@ export default function Home() {
       <Features />
       <Extension />
       <Faq />
+      <ContactUs />
     </>
   );
 }
