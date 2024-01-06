@@ -4,39 +4,13 @@ import Container from "./Container";
 import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
 import useScroll from "@/app/_hooks/useScroll";
-
-type NavItem = {
-  title: string;
-  id: string;
-};
+import { navItems } from "@/utils/const";
+import { handleNavItemClick } from "@/utils/handleNavItemClick.util";
 
 interface NavbarProps {}
 
-const navItems: NavItem[] = [
-  {
-    title: "Features",
-    id: "features",
-  },
-  {
-    title: "Pricing",
-    id: "pricing",
-  },
-  {
-    title: "Contact",
-    id: "contact",
-  },
-];
-
 const Navbar = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-
-  const handleNavItemClick = (id: string) => {
-    const section = document.getElementById(id);
-
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const isScrolled = useScroll(96);
 
