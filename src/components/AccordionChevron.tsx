@@ -11,7 +11,7 @@ const AccordionChevron = ({ className, ...props }: AccordionChevronProps) => {
       className={className}
       {...props}
     >
-      <path fill="none" stroke-width="3" d="M1 1l8 8 8-8" />
+      <path fill="none" strokeWidth="3" d="M1 1l8 8 8-8" />
     </svg>
   );
 };
