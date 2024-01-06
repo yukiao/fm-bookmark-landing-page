@@ -32,12 +32,14 @@ const Footer = () => {
             <Image
               width={24}
               height={24}
+              className="cursor-pointer"
               src={"/images/icon-facebook.svg"}
               alt="facebook-icon"
             />
             <Image
               width={24}
               height={24}
+              className="cursor-pointer"
               src={"/images/icon-twitter.svg"}
               alt="facebook-icon"
             />
