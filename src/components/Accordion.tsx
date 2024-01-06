@@ -53,7 +53,7 @@ Accordion.Item = ({ children, name, title }: AccordionItemProps) => {
             isActive
               ? "stroke-soft-red rotate-180"
               : "stroke-soft-blue rotate-0"
-          } transition-all duration-300 shrink-0`}
+          } transition-all duration-300 shrink-0 -z-10`}
         />
       </div>
       <div

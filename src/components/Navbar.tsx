@@ -1,11 +1,12 @@
 "use client";
-import React, { PropsWithChildren, useState } from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
 import useScroll from "@/app/_hooks/useScroll";
 import { navItems } from "@/utils/const";
 import { handleNavItemClick } from "@/utils/handleNavItemClick.util";
+import LogoIcon from "./LogoIcon";
 
 interface NavbarProps {}
 
@@ -21,13 +22,14 @@ const Navbar = () => {
       }`}
     >
       <Container>
-        <div className="flex justify-between items-center h-24">
-          <Image
-            src={"/images/logo-bookmark.svg"}
-            className="relative z-30"
-            alt={"logo"}
-            width={148}
-            height={25}
+        <div className="flex justify-between items-center h-20">
+          <LogoIcon
+            className="z-30 relative"
+            textClassName={`${toggle ? "fill-white" : "fill-very-dark-blue"}`}
+            circleIconClassName={`${toggle ? "fill-white" : "fill-soft-blue"}`}
+            bookmarkIconClassName={`${
+              toggle ? "fill-very-dark-blue" : "fill-white"
+            }`}
           />
 
           <ul className="hidden md:flex items-center space-x-10">

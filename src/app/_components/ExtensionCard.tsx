@@ -48,7 +48,7 @@ const ExtensionCard = ({
         height={4}
       />
       <div className="p-5 pt-0">
-        <button className="bg-soft-blue py-2 px-5 text-sm text-white font-medium rounded-sm inline-block mt-5">
+        <button className="bg-soft-blue border-2 py-2 px-5 text-sm text-white font-medium rounded-sm inline-block mt-5 hover:bg-white hover:text-soft-red hover:border-soft-red">
           Add & Install Extension
         </button>
       </div>
