@@ -1,5 +1,5 @@
 "use client";
-import React, { PropsWithChildren, useState } from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import Image from "next/image";
 import { Squash as Hamburger } from "hamburger-react";
@@ -21,7 +21,7 @@ const Navbar = () => {
       }`}
     >
       <Container>
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           <Image
             src={"/images/logo-bookmark.svg"}
             className="relative z-30"
