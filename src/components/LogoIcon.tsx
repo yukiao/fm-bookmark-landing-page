@@ -4,14 +4,21 @@ interface LogoIconProps {
   textClassName?: string;
   bookmarkIconClassName?: string;
   circleIconClassName?: string;
+  className?: string;
 }
 const LogoIcon = ({
   textClassName = "fill-very-dark-blue",
   bookmarkIconClassName = "fill-white",
   circleIconClassName = "fill-soft-blue",
+  className,
 }: LogoIconProps) => {
   return (
-    <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      width="148"
+      height="25"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g fill="none" fill-rule="evenodd">
         <path
           className={textClassName}
