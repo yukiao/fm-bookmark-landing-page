@@ -57,7 +57,7 @@ const EmailForm = () => {
           }`}
         >
           <span className="text-[14px] text-white font-medium">
-            <em>Whoops, make sure it's an email</em>
+            <em>Whoops, make sure it&apos;s an email</em>
           </span>
         </div>
       </div>

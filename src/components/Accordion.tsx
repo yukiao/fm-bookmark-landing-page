@@ -33,7 +33,7 @@ const Accordion = ({ children }: AccordionProps) => {
   );
 };
 
-Accordion.Item = ({ children, name, title }: AccordionItemProps) => {
+const AccordionItem = ({ children, name, title }: AccordionItemProps) => {
   const { selectedAccordion, changeSelectedAccordion } = useAccordionContext();
   const isActive = selectedAccordion === name;
 
@@ -66,5 +66,7 @@ Accordion.Item = ({ children, name, title }: AccordionItemProps) => {
     </div>
   );
 };
+
+Accordion.Item = AccordionItem;
 
 export default Accordion;
