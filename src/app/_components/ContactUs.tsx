@@ -10,8 +10,8 @@ const ContactUs = () => {
           <p className="text-white text-center tracking-[4px] uppercase text-[12px] font-medium">
             35.000+ Already Joined
           </p>
-          <p className="max-w-sm mx-auto text-center text-white font-bold text-2xl">
-            Stay up-to-date with what we're doing
+          <p className="max-w-sm mx-auto text-center text-white font-bold text-1xl">
+            Stay up-to-date with what we&apos;re doing
           </p>
           <EmailForm />
         </div>
