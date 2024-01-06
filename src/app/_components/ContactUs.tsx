@@ -1,11 +1,10 @@
 import Container from "@/components/Container";
-import Image from "next/image";
 import React from "react";
 import EmailForm from "./EmailForm";
 
 const ContactUs = () => {
   return (
-    <section className="py-10 bg-soft-blue">
+    <section id="contact" className="py-10 bg-soft-blue">
       <Container>
         <div className="flex flex-col space-y-5">
           <p className="text-white text-center tracking-[4px] uppercase text-[12px] font-medium">
